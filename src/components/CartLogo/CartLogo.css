@@ -1,0 +1,15 @@
+.CartLogo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.CartLogo__icon{
+    color: azure;
+    font-size: 30px;
+}
+
+.CartLogoNumero{
+    color: azure;
+    margin-left: 5px;
+    margin-top: 5px;
+}
