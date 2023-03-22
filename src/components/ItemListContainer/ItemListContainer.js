@@ -33,7 +33,8 @@ export const ItemListContainer = () => {
     }, [categoryId])
 
     return (
-        <div className="container my-5">
+        <div className="container">
+            
 
             {
                 loading
