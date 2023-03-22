@@ -1,16 +1,23 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Navbar2 } from './components/Navbar/Navbar';
-import { ItemsListContainer } from './components/ItemsListContainer/ItemsListContainer';
-import { ProductCard } from './components/ProductCard/ProductCard.js';
+import { Navbar } from './components/Navbar/Navbar';
+import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
+
 
 function App() {
   return (
-    <div>
-       <Navbar2/>
-      <ItemsListContainer greeting={'Bienvenidos a Hardware World'}/>
-      <ProductCard/>
-    </div>
-  );
+      <BrowserRouter>
+
+       <Navbar/>
+       <Routes>
+        <Route path='/' element={ <ItemListContainer /> }/>
+        <Route path='/productos/:categoryId' element={ <ItemListContainer /> }/>
+        <Route path='/detail/:itemId' element={ <ItemDetailContainer /> } />
+        <Route path='*' element={ <Navigate to={"/"}/> }/>
+      </Routes>
+       
+       </BrowserRouter>
+);
 }
 
 export default App;

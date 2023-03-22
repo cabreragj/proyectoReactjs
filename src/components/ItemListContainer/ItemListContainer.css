@@ -1,0 +1,12 @@
+.list-container {
+    max-width: 900px;
+    margin: 40px auto;
+    display: flex;
+    align-items: center;
+}
+
+.list-container__title {
+    color: rgb(64, 24, 70);
+    
+}
+
