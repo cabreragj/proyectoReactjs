@@ -1,12 +1,16 @@
 import { BsCart4 } from "react-icons/bs";
 import './CartLogo.css';
+import { Link } from 'react-router-dom'
+import { useContext } from 'react'
+import { CartContext } from '../../Context/CartContext'
 
 
 export const CartLogo = () => {
+    const { totalCantidad } = useContext(CartContext)
     return (
-        <div className="CartLogo">
+        <Link to="/Cart" className="CartLogo">
             <BsCart4 className='CartLogo__icon'/>
-            <span className="CartLogoNumero">0</span>
-        </div>
+            <span> {totalCantidad()}</span>
+        </Link>
     )
 }
