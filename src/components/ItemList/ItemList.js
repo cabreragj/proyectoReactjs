@@ -6,10 +6,9 @@ const ItemList = ( {items} ) => {
 
     return (
         <div className='list-container'>
-            
-            <div className='item'>
+
                 { items.map((producto) => <Item key={producto.id} item={producto}/>) }
-            </div>
+
         </div>
     )
 }

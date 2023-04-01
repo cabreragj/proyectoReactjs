@@ -34,8 +34,7 @@ export const ItemListContainer = () => {
 
     return (
         <div className="container">
-            
-
+    
             {
                 loading
                     ? <h2>Cargando...</h2>

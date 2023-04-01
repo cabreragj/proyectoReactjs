@@ -1,8 +1,8 @@
-.item {
-    max-width: 1200px;
+.list-container {
+    max-width: 1500px;
     display: flex;
     flex-flow: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 1rem;
 
 }

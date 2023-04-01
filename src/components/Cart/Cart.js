@@ -9,26 +9,27 @@ const Cart = () => {
 
     return (
         <div className="container">
-            <div className="list-container">
             <h2>Tu compra</h2>
+            <div className="list-container">
             {
                 cart.map((item) => ( 
-                    <div key={item.id}>
-                        <h4>{item.name}</h4>
-                        <img src={item.img} alt={item.nombre}/>
+                    <div className="item-cart" key={item.id}>
+                        <h4 class="card-title">{item.name}</h4>
+                        <img class="card-image" src={item.img} alt={item.nombre}/>
                         <div>
-                            <small>Cantidad: {item.cantidad} Precio un: {item.precio}</small>
+                            <p class="card-description">Cantidad: {item.cantidad}</p>
+                            <p class="card-description">Precio unitario: {item.precio}</p>
                         </div>
-                        <p>Precio total: {item.precio * item.cantidad}</p>
-                        <button onClick={() => removerItem(item.id)} className="btn"><BsFillTrashFill/></button>
-
+                        <p class="card-description">Precio total: {item.precio * item.cantidad}</p>
+                        <button onClick={() => removerItem(item.id)} className="btn-d"><BsFillTrashFill/></button>
+                        <hr class="caesar" />
                     </div>
                 ))
             }
             </div>
         <div className="btn-container">
             <h3>TOTAL: {totalCarrito()}</h3>
-            <button onClick={vaciarCarrito} className="btn">Vaciar carrito</button>
+            <button onClick={vaciarCarrito} className="btn-d">Vaciar carrito</button>
         </div>
         </div>
     )

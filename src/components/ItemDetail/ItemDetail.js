@@ -20,14 +20,14 @@ const ItemDetail = ( {item} ) => {
 
     return (
         <div className='detalle'>
-            <h2>{item.nombre}</h2>
-            <img src={item.img} alt={item.nombre}/>
-            <p>{item.marca}</p>
-            <p>Precio: ${item.precio}</p>
+            <h2 class="card-title">{item.nombre}</h2>
+            <img class="card-image" src={item.img} alt={item.nombre}/>
+            <p class="card-description">{item.marca}</p>
+            <p class="card-description">Precio: ${item.precio}</p>
             
             {
                 isInCart(item.id)
-                ?   <Link to="/cart" className="btn btn-success">Terminar mi compra</Link>
+                ?   <Link to="/cart" className="btn-d">Terminar mi compra</Link>
                 :   <ItemCount 
                         max={item.stock}
                         cantidad={cantidad}
@@ -35,6 +35,7 @@ const ItemDetail = ( {item} ) => {
                         agregar={handleAgregar}
                     />
             }
+            <hr class="caesar" />
         </div>
     )
 }
