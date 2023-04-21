@@ -1,5 +1,5 @@
 .list-container {
-    max-width: 1500px;
+    
     display: flex;
     flex-flow: wrap;
     justify-content: space-evenly;

@@ -2,6 +2,7 @@ import { useContext } from "react"
 import { CartContext } from "../../Context/CartContext"
 import { BsFillTrashFill } from 'react-icons/bs'
 import './Cart.css'
+import { Link } from "react-router-dom"
 
 
 const Cart = () => {
@@ -30,6 +31,8 @@ const Cart = () => {
         <div className="btn-container">
             <h3>TOTAL: {totalCarrito()}</h3>
             <button onClick={vaciarCarrito} className="btn-d">Vaciar carrito</button>
+            <Link to="/checkout" className="btn-d">Finalizar la compra </Link>
+
         </div>
         </div>
     )

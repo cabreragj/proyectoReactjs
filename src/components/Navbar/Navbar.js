@@ -15,8 +15,6 @@ export const Navbar = () => {
       <Link to='/productos/Fuente' className="navbar__link">Fuente</Link>
       <Link to='/productos/Memoria' className="navbar__link">Memoria</Link>
       <Link to='/productos/Procesador' className="navbar__link">Procesador</Link>
-      <p className="navbar__link"> Nuestros Sponsor</p>
-      <p className="navbar__link">Quienes somos</p>
       <CartLogo/>
       </nav>
           
