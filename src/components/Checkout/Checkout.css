@@ -1,0 +1,6 @@
+.form-item {
+    padding: auto;
+    display: block;
+    align-items: center;
+    flex-direction: column;
+}

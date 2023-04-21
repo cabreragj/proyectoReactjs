@@ -67,9 +67,9 @@ export const Checkout = () => {
     if (orderId) {
         return (
             <div className="container my-5">
-                <h2>Tu compra se registró exitosamente!</h2>
+                <h2>La compra fue ingresada correctamente</h2>
                 <hr/>
-                <p>Guardá tu número de orden: <strong>{orderId}</strong></p>
+                <p>Tu número de orden es el siguiente: <strong>{orderId}</strong></p>
             </div>
         )
     }
@@ -79,32 +79,32 @@ export const Checkout = () => {
     }
 
     return (
-        <div className="container my-5">
-            <h2>Ingresa tus datos</h2>
+        <div className="containerForm">
+            <h2>Por favor llená el formulario</h2>
             <hr/>
 
             <form onSubmit={handleSubmit}>
                 <input
                     value={values.nombre}
                     type="text"
-                    className="form-control my-2"
-                    placeholder="Tu nombre"
+                    className="form-item"
+                    placeholder="Nombre"
                     onChange={handleInputChange}
                     name="nombre"
                 />
                 <input
                     value={values.direccion}
                     type="text"
-                    className="form-control my-2"
-                    placeholder="Tu direccion"
+                    className="form-item"
+                    placeholder="Direccion"
                     name="direccion"
                     onChange={handleInputChange}
                 />
                 <input
                     value={values.email}
                     type="email"
-                    className="form-control my-2"
-                    placeholder="Tu email"
+                    className="form-item"
+                    placeholder="Email"
                     name="email"
                     onChange={handleInputChange}
                 />
